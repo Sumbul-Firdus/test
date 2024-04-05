@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<style>
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .font-weight-bold {
+        font-weight: bold;
+    }
+    .customer-logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .customer-logos img {
+        max-width: 100%;
+        max-height: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center font-weight-bold">Our Partners</h1>
+    <section class="customer-logos slider">
+        <div class="slide"><img src="images/adidas.png" alt="Adidas Logo"></div>
+        <div class="slide"><img src="images/facebook.png" alt="Facebook Logo"></div>
+        <div class="slide"><img src="images/google.png" alt="Google Logo"></div>
+        <div class="slide"><img src="images/instagram.png" alt="Instagram Logo"></div>
+        <div class="slide"><img src="images/nike.png" alt="Nike Logo"></div>
+        <div class="slide"><img src="images/twitter.png" alt="Twitter Logo"></div>
+        <div class="slide"><img src="images/uber.png" alt="Uber Logo"></div>
+        <div class="slide"><img src="images/youtube.png" alt="Youtube Logo"></div>
+    </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    // Initialize Slider (if you're using a library like Slick)
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+</body>
+</html>
